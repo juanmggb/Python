@@ -8,10 +8,10 @@ class Database:
     def __init__(self):
         #Connect to MySQL database
         self.connection = pymysql.connect(
-              host = 'localhost',        #IP adress
-              user = 'root',              #Name of the user
-              password = '',   #Password
-              database = 'empresa_hielo' #The database to connect
+              host = 'localhost, or the ip adress', #IP adress
+              user = 'user',                        #Name of the user
+              password = 'Password',                #Password
+              database = 'The name of the database' #The database to connect
             )
         
         self.cursor = self.connection.cursor()
@@ -82,15 +82,15 @@ class Database:
 database = Database()
 
 #Select the product with the ID = id and the TABLE = table
-id = 3
-table ='productos'
-column = 'cantidad'
-value = 13
+ID = id
+TABLE ='table'
+COLUMN = 'column'
+VALUE = 'value'
 
 #Update the database
-database.update(table,column,id,value)
+database.update(TABLE,COLUMN,ID,VALUE)
 #View the table in the database
-database.select(table)
+database.select(TABLE)
 #Close connection
 database.close()
 
