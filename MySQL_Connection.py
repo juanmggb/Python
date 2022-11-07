@@ -95,3 +95,6 @@ database.select(TABLE)
 database.close()
 
 # I get it
+
+def mi_suma(x,y):
+    return x+y
